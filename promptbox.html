@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin-top: 200px;
+            margin-left: 300px;
+        }
+
+        table {
+            border-color: red;
+        }
+
+        td {
+            height: 40px;
+            width: 70px;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        #mybutton {
+            height: 40px;
+            width: 80px;
+            border-radius: 20px;
+            background-color: aqua;
+            border: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <tbody>
+            <tr>
+                <td id="1">1</td>
+                <td id="2">2</td>
+                <td id="3">3</td>
+            </tr>
+            <tr>
+                <td id="4">4</td>
+                <td id="5">5</td>
+                <td id="6">6</td>
+            </tr>
+            <tr>
+                <td id="7">7</td>
+                <td id="8">8</td>
+                <td id="9">9</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <button id="mybutton">select cell</button>
+
+    <script>
+        let button = document.getElementById("mybutton");
+        button.addEventListener('click', function () {
+            let num = prompt("enter value btw 1-9");
+            //var lia num ar jo user enter krega vo num m store hogi
+            let cell = document.getElementById(num);
+            if (cell) {
+                cell.style.backgroundColor = "red";
+            }
+            else {
+                alert("invalid input");
+            }
+        })
+        //isse sirf ek line ari h colored but baki 2 lines ni
+        
+        /* var root1 = document.getElementById("root1");
+         var td1 = root1.getElementsByTagName("td");
+         var root2 = document.getElementById("root2");
+         var td2 = root1.getElementsByTagName("td");
+         var root3 = document.getElementById("root3");
+         var td3 = root1.getElementsByTagName("td");
+         var choice = prompt("enter your value");
+ 
+         if (choice == 1) {
+             td1[0].style.backgroundColor = "darkorange";
+         }
+         if (choice == 2) {
+             td1[1].style.backgroundColor = "darkorange";
+         }
+         if (choice == 3) {
+             td1[2].style.backgroundColor = "darkorange";
+         }
+         if (choice == 4) {
+             td2[0].style.backgroundColor = "darkorange";
+         }
+         if (choice == 5) {
+             td2[1].style.backgroundColor = "darkorange";
+         }
+         if (choice == 6) {
+             td2[2].style.backgroundColor = "darkorange";
+         }
+         if (choice == 7) {
+             td3[0].style.backgroundColor = "darkorange";
+         }
+         if (choice == 8) {
+             td3[0].style.backgroundColor = "darkorange";
+         }
+         if (choice == 9) {
+             td3[0].style.backgroundColor = "darkorange";
+         }*/
+    </script>
+</body>
+
+</html>
